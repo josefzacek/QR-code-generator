@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(138.45deg, rgba(204, 25, 223, 0.55) 0.85%, #4D31FE 86.81%);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+@media(min-width: 993px){
+  body {
+    background-size: 50vw;
+  }
+}
+
