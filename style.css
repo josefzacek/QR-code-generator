@@ -10,3 +10,6 @@ body {
   }
 }
 
+#qrcode-holder {
+  max-width: 248px;
+}
