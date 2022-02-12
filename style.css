@@ -4,12 +4,15 @@ body {
   background-position: center right;
 }
 
+#qrcode-holder {
+  max-width: 248px;
+}
+
 @media(min-width: 993px){
   body {
     background-size: 50vw;
   }
-}
-
-#qrcode-holder {
-  max-width: 248px;
+  h1.page-title {
+    color: #000000 !important;
+  }
 }
