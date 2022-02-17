@@ -11,3 +11,6 @@ function generateQrCode(url){
     correctLevel : QRCode.CorrectLevel.H
   });
 }
+
+// run on page load
+generateQrCode("https://josefzacek.com")
