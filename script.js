@@ -1,4 +1,4 @@
-var qrCodeHolder = document.getElementById("qrcode-holder")
+let qrCodeHolder = document.getElementById("qrcode-holder")
 
 // generate QR code
 function generateQrCode(url){
