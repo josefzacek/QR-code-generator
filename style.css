@@ -4,8 +4,8 @@ body {
   background-position: center right;
 }
 
-#qrcode-holder {
-  max-width: 248px;
+#qrcode-holder img {
+  width: 100%;
 }
 
 @media(min-width: 993px){
