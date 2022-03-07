@@ -17,7 +17,9 @@ body {
   }
   small#input-field-warning-text-url,
   small#input-field-warning-text-length,
-  small#input-field-warning-text-empty {
+  small#input-field-warning-text-empty,
+  small#input-field-warning-text-empty-space,
+  small#input-field-warning-text-dot {
     color: #dc3545 !important;
   }
 }
