@@ -18,7 +18,7 @@ let qrCodeHeight;
 
 // generate QR code
 function generateQrCode(url){
-  var qrcode = new QRCode(qrCodeHolder, {
+  var qrcode = new QRCode(qrCode, {
     text: url,
     width: 200,
     height: 200,
