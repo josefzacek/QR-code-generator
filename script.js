@@ -30,3 +30,12 @@ function generateQrCode(url){
 
 // run on page load
 generateQrCode("https://josefzacek.com")
+
+function getQrCodeHeight(){
+  setTimeout(function() {
+    qrCodeHeight = qrCodeHolder.clientHeight;
+    qrCodeHolder.style.height = qrCodeHeight + "px";
+  }, 1000);
+}
+
+getQrCodeHeight();
