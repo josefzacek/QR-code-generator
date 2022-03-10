@@ -39,3 +39,9 @@ function getQrCodeHeight(){
 }
 
 getQrCodeHeight();
+}
+
+// run validate function as user types
+inputField.addEventListener("keyup", function(){
+  validateInput();
+})
