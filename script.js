@@ -39,6 +39,74 @@ function getQrCodeHeight(){
 }
 
 getQrCodeHeight();
+
+// validate user input
+function validateInput(){
+  if (inputField.value.startsWith("http://") || inputField.value.startsWith("https://")){
+    isInputTextCorrectUrl = true;
+  } else {
+    isInputTextCorrectUrl = false;
+  }
+
+  if (inputField.value.length >= 10){
+    hasInputTextCorrectLength = true;
+  } else {
+    hasInputTextCorrectLength = false;
+  }
+
+  if (inputField.value.length != 0){
+    isInputFieldTextFilled = true;
+  } else {
+    isInputFieldTextFilled = false;
+  }
+
+  if (/\s/.test(inputField.value)) {
+    hasInputFieldTextEmptySpaces = true;
+  } else {
+    hasInputFieldTextEmptySpaces = false;
+  }
+
+  if (inputField.value.includes('.')) {
+    hasInputFieldTextContainDot = true;
+  } else {
+    hasInputFieldTextContainDot = false;
+  }
+
+  if (isInputTextCorrectUrl){
+    inputFieldWarningTextUrl.classList.add("d-none");
+  } else {
+    inputFieldWarningTextUrl.classList.remove("d-none");
+  }
+
+  if (hasInputTextCorrectLength){
+    inputFieldWarningTextLength.classList.add("d-none");
+  } else {
+    inputFieldWarningTextLength.classList.remove("d-none");
+  }
+
+  if (isInputFieldTextFilled){
+    inputFieldWarningTextEmpty.classList.add("d-none");
+  } else {
+    inputFieldWarningTextEmpty.classList.remove("d-none");
+  }
+
+  if (hasInputFieldTextEmptySpaces){
+    inputFieldWarningTextEmptySpaces.classList.remove("d-none");
+  } else {
+    inputFieldWarningTextEmptySpaces.classList.add("d-none");
+  }
+
+  if (hasInputFieldTextContainDot){
+    inputFieldWarningTextDot.classList.add("d-none");
+  } else {
+    inputFieldWarningTextDot.classList.remove("d-none");
+  }
+
+  if (isInputTextCorrectUrl && hasInputTextCorrectLength && isInputFieldTextFilled && hasInputFieldTextContainDot && (hasInputFieldTextEmptySpaces == false) ) {
+    inputField.classList.remove("border-danger");
+  } else {
+    inputField.classList.add("border-danger");
+  }
 }
 
 // run validate function as user types
