@@ -113,3 +113,11 @@ function validateInput(){
 inputField.addEventListener("keyup", function(){
   validateInput();
 })
+// generate QR code
+function generateQrCodeWithDelay(url){
+  spinner.classList.remove("d-none")
+  setTimeout(function() {
+    generateQrCode(url);
+    spinner.classList.add("d-none")
+  }, 1000);
+}
