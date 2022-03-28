@@ -113,6 +113,19 @@ function validateInput(){
 inputField.addEventListener("keyup", function(){
   validateInput();
 })
+
+// submit url passed to generate QR code
+generateButton.addEventListener('click', function(){
+  if (isInputTextCorrectUrl && hasInputTextCorrectLength && isInputFieldTextFilled && hasInputFieldTextContainDot && (hasInputFieldTextEmptySpaces == false) ){
+    qrCode.innerHTML = '';
+    generateQrCodeWithDelay(inputField.value)
+    inputField.value = "";
+    isInputTextCorrectUrl, hasInputTextCorrectLength, isInputFieldTextFilled, hasInputFieldTextContainDot, hasInputFieldTextContainDot = false;
+  } else {
+    validateInput();
+  }
+});
+
 // generate QR code
 function generateQrCodeWithDelay(url){
   spinner.classList.remove("d-none")
