@@ -16,6 +16,13 @@ let isInputTextCorrectUrl = false;
 let hasInputFieldTextContainDot = false;
 let qrCodeHeight;
 
+// generate name form url passed
+function generateQrCodeDownloadName(url){
+  var inputValueAfterSlashes= url.substring(url.indexOf('//') + 2);
+  var qrCodeName = inputValueAfterSlashes.replace(/[^\w\s]/gi, '-');
+  return qrCodeName;
+}
+
 // generate QR code
 function generateQrCode(url){
   var qrcode = new QRCode(qrCode, {
