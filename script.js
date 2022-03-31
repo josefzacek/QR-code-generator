@@ -33,6 +33,8 @@ function generateQrCode(url){
     colorLight : "#ffffff",
     correctLevel : QRCode.CorrectLevel.H
   });
+
+  downloadButton.setAttribute('download', generateQrCodeDownloadName(url));
 }
 
 // run on page load
