@@ -35,6 +35,20 @@ function generateQrCode(url){
   });
 
   downloadButton.setAttribute('download', generateQrCodeDownloadName(url));
+
+  setTimeout(function(){
+    let canvasImage = document.querySelector("#qrcode img");
+
+    if (canvasImage.getAttribute("src") == null) {
+      setTimeout(function(){
+        downloadButton.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+      }, 300);
+    } else {
+      setTimeout(function(){
+        downloadButton.setAttribute("href", canvasImage.getAttribute("src"));
+      }, 300);
+    }
+  }, 1000);
 }
 
 // run on page load
